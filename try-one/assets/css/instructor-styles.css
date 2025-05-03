@@ -1,0 +1,315 @@
+/* Core Variables */
+:root {
+    --primary-color: #2a2185;
+    --primary-light: #3f32c7;
+    --secondary-color: #f0f2f5;
+    --success-color: #3ec868fd;
+    --danger-color: #ff4d6d;
+    --warning-color: #ffb72b;
+    --text-color: #1a1a1a;
+    --text-light: #808080;
+    --bg-light: #f4fdff;
+    --white: #ffffff;
+    --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --border-radius: 8px;
+    --transition: all 0.4s ease;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+/* Content Area */
+.content-wrapper {
+    margin-left: 200px;
+    transition: var(--transition);
+    padding: 20px;
+    width: calc(100% - 200px);
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Card Styles */
+.card {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    margin-bottom: 20px;
+    overflow: hidden;
+    transition: var(--transition);
+    width: 100%;
+    border: none;
+}
+
+.card-header {
+    padding: 15px 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    background-color: var(--white);
+    font-weight: 600;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+/* Dashboard Stats Cards */
+.stat-card {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.stat-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 20px;
+    font-size: 24px;
+}
+
+.stat-students .stat-icon {
+    background-color: rgba(42, 33, 133, 0.15);
+    color: var(--primary-color);
+}
+
+.stat-exams .stat-icon {
+    background-color: rgba(43, 218, 96, 0.15);
+    color: var(--success-color);
+}
+
+.stat-programs .stat-icon {
+    background-color: rgba(255, 183, 43, 0.15);
+    color: var(--warning-color);
+}
+
+.stat-content h3 {
+    font-size: 24px;
+    margin: 0 0 5px 0;
+    font-weight: 700;
+}
+
+.stat-content p {
+    margin: 0;
+    color: var(--text-light);
+    font-size: 14px;
+}
+
+/* Tables */
+.table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.table-responsive {
+    width: 100%;
+    min-height: 550px;
+    background-color: #f8f9fa; /* light background */
+    padding: 10px;
+}
+
+
+.table thead th {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    font-weight: 700;
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.table tbody td {
+    padding: 12px 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    vertical-align: middle;
+    transition: var(--transition);
+}
+
+/* Status Badges */
+.badge {
+    padding: 6px 12px;
+    border-radius: 50px;
+    font-weight: 500;
+    font-size: 12px;
+    display: inline-block;
+}
+
+.badge-active {
+    background-color: rgba(26, 202, 79, 0.15);
+    color: var(--success-color);
+}
+
+.badge-inactive {
+    background-color: rgba(188, 34, 62, 0.15);
+    color: var(--danger-color);
+}
+
+.badge-warning {
+    background-color: rgba(238, 176, 53, 0.15);
+    color: var(--warning-color);
+}
+
+/* Buttons */
+.btn {
+    padding: 8px 16px;
+    border-radius: var(--border-radius);
+    font-weight: 500;
+    transition: var(--transition);
+    cursor: pointer;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn i {
+    font-size: 16px;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-light);
+    transform: translateY(-2px);
+}
+
+.btn-success {
+    background-color: var(--success-color);
+    color: var(--white);
+}
+
+.btn-success:hover {
+    background-color: #25c354;
+    transform: translateY(-2px);
+}
+
+.btn-danger {
+    background-color: var(--danger-color);
+    color: var(--white);
+}
+
+.btn-danger:hover {
+    background-color: #e83e5a;
+    transform: translateY(-2px);
+}
+
+/* Forms */
+.form-container {
+    background: var(--white);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: var(--border-radius);
+    font-family: inherit;
+    transition: var(--transition);
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(42, 33, 133, 0.1);
+}
+
+/* Alert Messages */
+.alert {
+    padding: 15px 20px;
+    border-radius: var(--border-radius);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    animation: slideIn 0.3s ease;
+}
+
+.alert i {
+    font-size: 20px;
+}
+
+.alert-success {
+    background-color: rgba(43, 218, 96, 0.15);
+    color: var(--success-color);
+    border: 1px solid rgba(43, 218, 96, 0.3);
+}
+
+.alert-danger {
+    background-color: rgba(255, 77, 109, 0.15);
+    color: var(--danger-color);
+    border: 1px solid rgba(255, 77, 109, 0.3);
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .content-wrapper {
+        margin-left: 0;
+        width: 100%;
+        padding: 15px;
+    }
+
+    .stat-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .stat-icon {
+        margin: 0 0 15px 0;
+    }
+
+    .table-responsive {
+        margin: 0 -15px;
+        padding: 0 15px;
+        width: calc(100% + 30px);
+    }
+
+    .card-body {
+        padding: 15px;
+    }
+
+    .form-container {
+        padding: 20px;
+    }
+}
